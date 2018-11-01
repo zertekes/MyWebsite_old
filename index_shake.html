@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>NaZo Web designer / developer portfolio</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="keywords" content="logo design, website, website design, web develop, web design, freelancer, designer, graphics design, html, html5, css, javasript, photoshop, jquery, java, UK, globe, Hungary, London, US etc.">
+<meta name="description" content="Nazoweb is a protfolio site by Zoltan Ertekes web designer, web developer, logo designer.">
+<meta name="author" content="Zoltan Ertekes">
+<link rel="icon" type="image/x-icon" href="img/NaZo new.ico" >
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/styleshake.css" rel="stylesheet"> 
+<link href="font/css/fontello.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+ 
+</head>
+<body>
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="container"> <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a> <a class="brand" href="index.html"><img src="img/user.jpg" alt=""></a>
+      <ul class="nav nav-collapse pull-right">
+        <li><a href="index.html" class="active"><i class="icon-user"></i> Profile</a></li>
+        <li><a href="skills.html"><i class="icon-trophy"></i> Skills</a></li>
+        <li><a href="work.html"><i class="icon-picture"></i> Work</a></li>
+        <li><a href="resume.html"><i class="icon-doc-text"></i> Resume</a></li>
+      </ul>
+      <div class="nav-collapse collapse"></div>
+    </div>
+  </div>
+</div>
+<div class="container profile">
+  <div class="span3"> <img src="img/mini.png" id="shakeit"  alt=""> </div>
+  <div class="span5">
+    <h1>Zoltan Ertekes</h1>
+    <h3>NaZo Web &amp; Graphics Designer</h3>
+    <p> Hello, I am Zoltan Ertekes a freelancer Web and Graphics Designer. If you have something to be done just let me know and I will be there for you. (-: </p>
+    <a href="#myModal" role="button" data-toggle="modal" class="hire-me"><i class="icon-paper-plane"></i> Hire Me </a> </div>
+</div>
+<div class="row social">
+  <ul class="social-icons">
+    <li><a href="https://uk.linkedin.com/pub/zoltan-ertekes/101/65/134"><img src="img/linkedin logo.png" alt=""></a></li>
+    <li><a href="https://twitter.com/zertekes"><img src="img/twitter_green.png" alt=""></a></li>
+    <li><a href="https://plus.google.com/u/0/104690320949857897194"><img src="img/g-plus dark.png" alt=""></a></li>
+    <li><a href="https://www.facebook.com/zoltan.ertekes"><img src="img/facebook.png" alt=""></a></li>
+  </ul>
+</div>
+<div class="footer" href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+  <div class="container">
+    <p class="pull-left"><a href="http://nazoweb.com">www.nazoweb.com</a></p>
+    <p class="pull-right"><a href="#myModal" role="button" data-toggle="modal"> <i class="icon-mail"></i> CONTACT</a></p>
+  </div>
+  
+</div>
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel"><i class="icon-mail"></i> Contact Me</h3>
+  </div>
+  <div class="modal-body">
+  
+    <form action="/contact.php" method="post">
+      <input name="sendername" type="text" placeholder="Your Name"/>
+      <input name="sendermail" type="text" placeholder="Your Email"/>
+      <input name="website" type="text" placeholder="Website (Optional)"/>
+      <textarea name="smessage" rows="3" style="width:80%"></textarea>
+      <br>
+      <button type="submit" class="btn btn-large"><i class="icon-paper-plane"></i> SUBMIT</button>
+    </form>
+  </div>
+</div>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+
+<script>
+$("#shakeit").click(function(){
+    $("#shakeit").shakeit(3,7,800);
+});
+});//]]>  
+
+//ShakeIt Plugin 
+jQuery.fn.shakeit = function(intShakes, intDistance, intDuration) {
+    this.each(function() {
+        $(this).css("position","relative");
+        for (var x=1; x<=intShakes; x++) {
+        $(this).animate({left:(intDistance*-3)}, (((intDuration/intShakes)/4)))
+    .animate({left:intDistance}, ((intDuration/intShakes)/2))
+    .animate({left:0}, (((intDuration/intShakes)/4)));
+    }
+  });
+return this;
+}
+
+$("#myModal").modal("hidden");
+</script>
+</body>
+</html>
